@@ -3,6 +3,7 @@ from show import *
 from moi_truong import *
 from thuat_toan import *
 import time
+from tu_tao import * 
 # pygame.init phari duoc goi truoc khi su dung phuong thuc
 pygame.init()
 size = width , height = 600,600
