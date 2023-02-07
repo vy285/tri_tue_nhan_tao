@@ -97,7 +97,7 @@ class Dijkstra(Search):
         # heapq tu dong sap xep theo distance tang dan
         heapq.heappush(self.heap,(self.distance[self.start_node],self.entry_count,self.start_node))
         while self.heap and self.find == False:
-            time.sleep(DELAY+0.1)
+            time.sleep(DELAY)
             # lay node co distance be nhat
             (_,_,node ) = heapq.heappop(self.heap)
             if node.state == self.target_node.state:
@@ -172,7 +172,7 @@ class A_search(Search):
         heapq.heappush(self.heap,(h_score_start,self.entry_count,self.start_node))
         # khi heap con khac rong va chua tim thay target
         while self.heap and not self.find:
-            time.sleep(DELAY+1)
+            time.sleep(DELAY)
             
             #lay ra phan tu co g+ h min
             _,_,node = heapq.heappop(self.heap)
@@ -228,7 +228,7 @@ class BFS(Search):
         self.queue.frontier.add(self.start_node.state)
 
         while not self.queue.empty() and not self.find :
-            time.sleep(DELAY+0.5)
+            time.sleep(DELAY)
             node = self.queue.remove()
             print(node.state,node.action)
             self.board.visited.add(node)
